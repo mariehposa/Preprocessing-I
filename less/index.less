@@ -57,6 +57,25 @@ html, body {
     height: 100%;
 }
 
+// breakpoints
+@mobileBreakpoint: 550px;
+
+// font sizes for root
+@desktopFontSize: 100%;
+@mobileFontSize: 150%;
+
+// padding size
+@paddingPixel: @paddingPixel;
+
+:root {
+  font-size: @desktopFontSize;
+}
+
+@media(max-width: @mobileBreakpoint) {
+  :root {
+    font-size: @mobileFontSize;
+  }
+}
  body{
  	background: white;
  }
@@ -87,7 +106,7 @@ html, body {
 
 	.first-box{
 		display: flex;
-		padding: 15px;
+		padding: @paddingPixel;
 		border: 1px solid gray;
 		background: grey;
 
@@ -119,7 +138,7 @@ html, body {
 		border: 1px solid gray;
 		margin-top: 10px;
 		background: grey;
-		padding: 15px;
+		padding: @paddingPixel;
 		font-family: helvetica;
 
 		h2{
@@ -138,7 +157,7 @@ html, body {
 		border: 1px solid gray;
 		margin-top: 10px;
 		background: grey;
-		padding: 15px;
+		padding: @paddingPixel;
 		font-family: helvetica;
 	
 		.all-education{
@@ -176,7 +195,7 @@ html, body {
 		border: 1px solid gray;
 		margin-top: 10px;
 		background: grey;
-		padding: 15px;
+		padding: @paddingPixel;
 		font-family: helvetica;
 
 		h2{
@@ -214,7 +233,7 @@ html, body {
 		border: 1px solid gray;
 		margin-top: 10px;
 		background: grey;
-		padding: 15px;
+		padding: @paddingPixel;
 		font-family: helvetica;
 
 		h2{
@@ -239,7 +258,7 @@ html, body {
 	
 				span{
 					color: white;
-					line-height: 15px;
+					line-height: @paddingPixel;
 				}
 			}
 		}
@@ -248,7 +267,7 @@ html, body {
 	.contact{
 		border: 1px solid gray;
 		background: grey;
-		padding: 15px;
+		padding: @paddingPixel;
 		font-family: helvetica;
 
 		h2{
